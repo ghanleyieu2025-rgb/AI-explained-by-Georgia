@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A plain-language, balanced guide to how artificial intelligence works, where it helps, and why human oversight matters.">
+  <title>AI, Minus the Magic</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="AI, Minus the Magic — home">
+      <span class="brand-mark" aria-hidden="true">A·I</span>
+      <span>Minus the Magic</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open navigation</span>
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="#inside">Inside AI</a>
+      <a href="#tradeoffs">Trade-offs</a>
+      <a href="#future">What next?</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="eyebrow reveal">A plain-language field guide · 2026</div>
+      <h1 id="hero-title" class="reveal">AI is not magic.<br><span>It is a pattern machine.</span></h1>
+      <div class="hero-grid">
+        <p class="lede reveal">Artificial intelligence can spot signals, generate ideas and automate routine work. It can also be confidently wrong. The useful question is not “Is AI good or bad?” but <strong>“Who checks it, and what happens when it fails?”</strong></p>
+        <div class="hero-stamp reveal" aria-label="Main idea: powerful pattern finding, limited understanding">
+          <span>POWERFUL AT</span>
+          <strong>PATTERNS</strong>
+          <span>LIMITED AT</span>
+          <strong>UNDERSTANDING</strong>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#inside">Start with the machine <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="section explainer" id="inside" aria-labelledby="inside-title">
+      <div class="section-heading reveal">
+        <p class="kicker">01 / Inside the machine</p>
+        <h2 id="inside-title">A prediction engine, not a digital brain</h2>
+      </div>
+      <div class="split-grid">
+        <div class="prose reveal">
+          <p><span class="fact-label">Verified fact</span> The <a href="https://oecd.ai/en/wonk/definition">OECD defines an AI system</a> as a machine-based system that infers from inputs how to produce predictions, content, recommendations or decisions. Some systems follow human-written rules. Many modern systems learn statistical patterns from examples.</p>
+          <p>A language model, for instance, repeatedly predicts a likely next piece of text. Training tunes billions of numerical connections so its predictions better match patterns in its data. That can produce fluent explanations without human-like experience, intentions or guaranteed truth.</p>
+        </div>
+        <figure class="flow-card reveal">
+          <figcaption>One useful mental model</figcaption>
+          <div class="flow" aria-label="Data enters a model, which produces an output that a person checks">
+            <div class="flow-node">
+              <span>01</span><strong>INPUT</strong><small>text · images · numbers</small>
+            </div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="flow-node accent">
+              <span>02</span><strong>MODEL</strong><small>learned patterns + rules</small>
+            </div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="flow-node">
+              <span>03</span><strong>OUTPUT</strong><small>guess · ranking · content</small>
+            </div>
+          </div>
+          <div class="human-loop"><span aria-hidden="true">↳</span> Human judgment belongs around the whole loop.</div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="tradeoffs" aria-labelledby="tradeoffs-title">
+      <div class="section-heading reveal">
+        <p class="kicker">02 / The double edge</p>
+        <h2 id="tradeoffs-title">The same speed can help—or amplify harm</h2>
+      </div>
+      <div class="balance-grid">
+        <article class="balance-card benefit reveal">
+          <div class="card-index">A</div>
+          <h3>Where it helps</h3>
+          <ul>
+            <li><strong>At work:</strong> draft a first version, summarize long notes or find anomalies—leaving people to verify and decide.</li>
+            <li><strong>While studying:</strong> request a simpler explanation, practice questions or feedback. Used as a tutor, not a shortcut, it can support learning.</li>
+            <li><strong>For access:</strong> caption speech, translate text and describe images; voice cloning can even help a person who has lost speech.</li>
+          </ul>
+          <p class="card-note">Best fit: repetitive, reviewable tasks where an error is recoverable.</p>
+        </article>
+        <article class="balance-card risk reveal">
+          <div class="card-index">B</div>
+          <h3>Where it breaks</h3>
+          <ul>
+            <li><strong>Errors:</strong> plausible wording can disguise invented facts. A generated answer is a lead, not evidence.</li>
+            <li><strong>Bias and privacy:</strong> training data can reproduce unfair patterns or expose sensitive information.</li>
+            <li><strong>Scale:</strong> the same tools that personalize help can mass-produce phishing, deepfakes and misinformation.</li>
+          </ul>
+          <p class="card-note"><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST’s framework</a> says trustworthy systems should be valid, safe, secure, transparent, privacy-enhanced and fair.</p>
+        </article>
+      </div>
+
+      <aside class="case-study reveal" aria-labelledby="case-title">
+        <div class="case-label">CASE FILE / TRUST YOUR PROCESS, NOT A FACE</div>
+        <div>
+          <h3 id="case-title">When “everyone looked real”</h3>
+          <p>In 2024, Hong Kong police described a worker being deceived in a deepfake video conference and transferring about HK$200 million. The lesson is practical: convincing media is no longer proof of identity. The <a href="https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes">FTC recommends</a> calling back on a known number when a familiar voice makes an urgent request.</p>
+        </div>
+        <div class="case-rule">
+          <span>PAUSE</span><span>VERIFY</span><span>THEN ACT</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section future" id="future" aria-labelledby="future-title">
+      <div class="section-heading reveal">
+        <p class="kicker">03 / A future stress test</p>
+        <h2 id="future-title">More capability means more responsibility</h2>
+      </div>
+      <p class="future-intro reveal"><span class="interpretation-label">My interpretation</span> AI’s future will be shaped less by a single dramatic breakthrough than by millions of decisions about where it is connected, how much power it receives and whether humans can still intervene.</p>
+
+      <div class="future-grid">
+        <article class="future-card reveal">
+          <span class="future-number">01</span>
+          <h3>More useful partners</h3>
+          <p>Systems may become better tutors, research assistants and accessibility tools. The opportunity is not replacing judgment; it is giving people more time and reach.</p>
+        </article>
+        <article class="future-card reveal">
+          <span class="future-number">02</span>
+          <h3>More tempting targets</h3>
+          <p>Connected agents could take actions across email, code and finance. A bad instruction, attack or outage could travel farther, so permissions, testing and manual fallbacks matter.</p>
+        </article>
+        <article class="future-card reveal">
+          <span class="future-number">03</span>
+          <h3>More pressure on power</h3>
+          <p><span class="forecast-label">Forecast</span> The <a href="https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary">IEA projects</a> data-centre electricity use could rise from 485 TWh in 2025 to about 950 TWh in 2030. That is not a prediction of automatic blackouts, but concentrated new demand can strain local grids if generation and transmission lag.</p>
+        </article>
+      </div>
+
+      <div class="guardrail reveal">
+        <p>Before trusting an AI-supported decision, ask:</p>
+        <ol>
+          <li><span>01</span> Can I check the source?</li>
+          <li><span>02</span> Who is affected if it is wrong?</li>
+          <li><span>03</span> Can a person pause or reverse it?</li>
+          <li><span>04</span> Is there a working fallback?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="section-heading reveal">
+        <p class="kicker">04 / Behind this page</p>
+        <h2 id="process-title">How this website was made</h2>
+      </div>
+      <div class="process-grid reveal">
+        <p>I organized the page around one idea—AI is powerful at patterns but needs human judgment—then used three short chapters to move from mechanism to trade-offs to future choices. The visual style borrows from technical field manuals: numbered labels, strong rules and high-contrast lime and coral accents. The input–model–output diagram is built with semantic HTML and CSS, so it stays sharp and readable without an image download.</p>
+        <p>The site uses semantic sections, a skip link, keyboard-visible focus states, responsive layouts and reduced-motion support. JavaScript is limited to the small-screen menu and subtle reveal effects; the content still works if scripting is unavailable. I tested the layout at desktop and mobile widths, checked headings, links, contrast and word count, and revised dense passages for clarity.</p>
+        <p>I acknowledge using <a href="https://openai.com/codex/">OpenAI Codex</a> to brainstorm the structure, draft and review code, and suggest revisions. I checked factual claims against the linked OECD, NIST, IEA, UNESCO and FTC sources, edited the content and tested the page. The final work is my responsibility.</p>
+      </div>
+    </section>
+
+    <section class="section sources" id="sources" aria-labelledby="sources-title">
+      <div class="section-heading reveal">
+        <p class="kicker">05 / Keep reading</p>
+        <h2 id="sources-title">Sources &amp; further reading</h2>
+      </div>
+      <ol class="source-list reveal">
+        <li><span>01</span><a href="https://oecd.ai/en/inside-artificial-intelligence">OECD.AI</a><small>How artificial intelligence works</small></li>
+        <li><span>02</span><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST</a><small>AI Risk Management Framework</small></li>
+        <li><span>03</span><a href="https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary">International Energy Agency</a><small>Key Questions on Energy and AI</small></li>
+        <li><span>04</span><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research">UNESCO</a><small>Guidance for generative AI in education</small></li>
+        <li><span>05</span><a href="https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes">U.S. Federal Trade Commission</a><small>AI voice-cloning scam guidance</small></li>
+        <li><span>06</span><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3250851/everyone-looked-real-multinational-firms-hong-kong-office-loses-hk200-million-after-scammers-stage">South China Morning Post</a><small>Hong Kong deepfake fraud case</small></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI, Minus the Magic</p>
+    <p>Designed for curious humans <span aria-hidden="true">↗</span></p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
